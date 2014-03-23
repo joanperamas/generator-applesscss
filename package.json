@@ -1,0 +1,44 @@
+{
+  "name": "generator-applesscss",
+  "version": "1.1.1",
+  "description": "Generador de una aplicacion base para empezar a trabajar con: LessCSS, Normalize, Jquery y Angularjs.",
+  "license": "MIT",
+  "repository": "applesscss/generator-applesscss",
+  "author": {
+    "name": "Joan Peramas Ceras",
+    "email": "joanperamas@gmail.com",
+    "url": "https://github.com/joanperamas/generator-applesscss"
+  },
+  "main": "app/index.js",
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "lesscss",
+    "app",
+    "front-end",
+    "h5bp",
+    "modernizr",
+    "jquery",
+    "grunt",
+    "angularjs"
+  ],
+  "dependencies": {
+    "yeoman-generator": "~0.16.0",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
