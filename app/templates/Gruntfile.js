@@ -15,14 +15,13 @@ module.exports = function(grunt){
 	//Configuración de Grunt
 	grunt.initConfig({
 		pkg : grunt.file.readJSON("package.json"),
-		baseApp : "app",
 		connect : {
 			server : {
 				options: {
 					port: 6969,
 					hostname: "localhost",
 					open: {
-						target: "http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/<%= baseApp %>/"
+						target: "http://localhost:6969/app/"
 					},
 					useAvailablePort : true
 				}
@@ -31,27 +30,27 @@ module.exports = function(grunt){
 		less : {
 			development: {
 				options: {
-					paths: ["<%= baseApp %>/less"],
+					paths: ["app/less"],
 					compress: true
 				},
 				files: {
-					"<%= baseApp %>/css/app.css": "<%= baseApp %>/less/app.less"
+					"app/css/app.css": "app/less/app.less"
 				}
 			}
 		},
 		watch : {
 			taskLess : {
-				files : ["<%= baseApp %>/less/*.less"],
+				files : ["app/less/*.less"],
 				tasks : ["less"]
 			}
 		},
 		jshint : {
-			all: ["Gruntfile.js", "<%= baseApp %>/js/**/*.js"]
+			all: ["Gruntfile.js", "app/js/**/*.js"]
 		},
 		uglify: {
 			all : {
 				files: {
-					"<%= baseApp %>/jsmin/app.min.js": [ "<%= baseApp %>/js/**/*app.js" ]
+					"app/jsmin/app.min.js": [ "app/js/**/*app.js" ]
 				}	
 			}
 		}
