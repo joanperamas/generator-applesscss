@@ -1,5 +1,7 @@
 /*
  * Aqui empieza todo
  */
-
-'use strict';
+" use strict ";
+function appController(){
+	
+}
